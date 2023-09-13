@@ -1,9 +1,24 @@
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
+import {
+  Routes,
+  Route,
+  Outlet,
+  Link,
+  NavLink,
+  useParams,
+  useNavigate,
+  useSearchParams,
+} from 'react-router-dom';
 
+import { AlertProvider } from "./context/alertContext";
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import HomePage from "./pages/HomePage";
+import BookingPage from "./pages/BookingPage";
+import ErrorPage from "./pages/ErrorPage";
+import ConfirmPage from "./pages/ConfirmPage";
 
 
 function App() {
@@ -19,6 +34,7 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
+      <AlertProvider>
       {/* <Grid
         position='fixed'
         top={0}
@@ -43,9 +59,22 @@ function App() {
         <GridItem w='100%' h='100vh' bg='pink.100' />
         <GridItem w='100%' h='100vh' bg='pink.100' />
       </Grid> */}
-      <Header />
-      <Main />
-      <Footer />
+        <Routes>
+          <Route element={<Main />}>
+            <Route index element={<HomePage />} />
+            <Route path="home" element={<HomePage />} />
+            <Route path="booking" element={<BookingPage />} />
+            <Route path="confirmation" element={<ConfirmPage />} />
+            {/* <Route path="users" element={<Users users={users} />}>
+              <Route
+                path=":userId"
+                element={<User onRemoveUser={handleRemoveUser} />}
+              />
+            </Route> */}
+            <Route path="*" element={<ErrorPage />} />
+          </Route>
+        </Routes>
+      </AlertProvider>
     </ChakraProvider>
   );
 }

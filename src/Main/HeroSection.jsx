@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 import { HeroSectionLogo } from '../assets';
+import { Link } from 'react-router-dom';
 
 
 export default function HeroSection(props) {
@@ -46,12 +47,14 @@ export default function HeroSection(props) {
               Lorem ipsum dolor sit amet consectetur. Morbi non quis ligula nisi.
               Odio amet sed pulvinar semper massa.
             </Text>
-            <Button
-              colorScheme='yellow'
-              mt={6}
-            >
-              Reserve a Table
-            </Button>
+            <Link to={'booking'}>
+              <Button
+                colorScheme='yellow'
+                mt={6}
+              >
+                Reserve a Table
+              </Button>
+            </Link>
           </VStack>
           <Flex>
             <Image

@@ -11,8 +11,9 @@ import {
   Text,
   Flex
 } from '@chakra-ui/react'
+import { NavLink } from "react-router-dom";
 
-import { Logo } from './assets';
+import { Logo } from '../assets';
 
 
 export default function Header(props) {
@@ -76,12 +77,7 @@ export default function Header(props) {
             as={'nav'}
             aria-label={'header'}
           >
-            <Link
-              href='/#home'
-              onClick={ handleClick('home') }
-            >
-              Home
-            </Link>
+            <Link to='/'>Home</Link>
             <Link
               href='/#about'
               onClick={ handleClick('about') }
@@ -107,11 +103,16 @@ export default function Header(props) {
               Order Online
             </Link>
             <Link
+              href='confirmation'
+            >
+              Login
+            </Link>
+            {/* <Link
               href='/#login'
               onClick={ handleClick('login') }
             >
               Login
-            </Link>
+            </Link> */}
           </Stack>
         </Stack>
       </Stack>
