@@ -15,7 +15,6 @@ import { NavLink } from "react-router-dom";
 
 export default function ConfirmPage(props) {
 
-
   return (
     <>
       <Container

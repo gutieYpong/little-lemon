@@ -1,8 +1,6 @@
-import React from 'react'
-
-import HeroSection from '../Main/HeroSection'
-import Highlights from '../Main/Highlights'
-import Testimonials from '../Main/Testimonials'
+import HeroSection from '../sections/HeroSection'
+import Highlights from '../sections/Highlights'
+import Testimonials from '../sections/Testimonials'
 
 
 export default function HomePage(props) {

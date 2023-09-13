@@ -6,7 +6,7 @@
 .pnp.js
 
 # src
-src/recycle/
+/src/recycle/*.jsx
 
 # testing
 /coverage

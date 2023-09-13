@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react'
-import {
-  Box,
-  Button,
-} from "@chakra-ui/react";
+import { isEmpty } from 'lodash';
 import dayjs from 'dayjs';
 
-import BookingForm from '../components/BookingForm.jsx'
 import { fetchAPI } from '../utils/api.js';
-import { deleteTimeSlot, getTimeSlot, saveTimeSlot } from '../utils/localStorage.js';
-import { isEmpty } from 'lodash';
+import { getTimeSlot, saveTimeSlot } from '../utils/localStorage.js';
+import BookingForm from '../components/BookingForm.jsx';
 
 
 export default function BookingPage(props) {
@@ -29,9 +25,9 @@ export default function BookingPage(props) {
 
   return (
     <>
-      <Box><Button onClick={ ()=> console.log(JSON.stringify(getTimeSlot()['2023-09-14'])) }>Get me</Button></Box>
+      {/* <Box><Button onClick={ ()=> console.log(JSON.stringify(getTimeSlot()['2023-09-14'])) }>Get me</Button></Box>
       <Box><Button onClick={ ()=> saveTimeSlot('2023-09-15', initTimeSlot) }>Save me</Button></Box>
-      <Box><Button onClick={ ()=> deleteTimeSlot() }>Delete me</Button></Box>
+      <Box><Button onClick={ ()=> deleteTimeSlot() }>Delete me</Button></Box> */}
       {
         !isWaiting && <BookingForm minBookingDate={ minBookingDate } maxBookingDate={ maxBookingDate } />
       }

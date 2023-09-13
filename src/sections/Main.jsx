@@ -1,11 +1,10 @@
-import React, { useReducer } from 'react'
 import {
   Outlet,
 } from 'react-router-dom';
 
-import Header from '../Header';
-import Footer from '../Footer';
 import Alert from '../components/Alert';
+import Header from './Header';
+import Footer from './Footer';
 
 
 export default function Main(props) {

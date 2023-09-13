@@ -9,6 +9,14 @@ import { Icon, createIcon } from '@chakra-ui/react'
 */
 export { default as Logo } from "./Logo.svg";
 export { default as HeroSectionLogo } from "./restaurant-food.jpg";
+export { default as GreekSalad } from "./greek salad.jpg";
+export { default as Bruchetta } from "./bruchetta.svg";
+export { default as LemonDessert } from "./lemon dessert.jpg";
+export { default as SteveJobs } from "./steve-jobs.png";
+export { default as GordonRamsay } from "./gordon-ramsay.jpeg";
+export { default as UncleRoger } from "./uncle-roger.jpeg";
+export { default as Chef } from "./restaurant-chef.jpg";
+
 
 // using `path`
 export const DeliveryIcon = createIcon({

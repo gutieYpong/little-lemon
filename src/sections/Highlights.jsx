@@ -1,13 +1,12 @@
-import React from 'react'
 import {
   Container,
   Stack,
-  VStack,
   Heading,
   Button
 } from '@chakra-ui/react';
 
 import HighlightCard from './HighlightCard';
+import { Bruchetta, GreekSalad, LemonDessert } from '../assets';
 
 
 export default function Highlights(props) {
@@ -45,12 +44,33 @@ export default function Highlights(props) {
             align={'center'}
             spacing={10}
           >
-            <HighlightCard />
-            <HighlightCard />
-            <HighlightCard />
+            {
+              CARD_INFO.map( item => <HighlightCard key={item.name} {...item} />)
+            }
           </Stack>
         </Stack>
       </Stack>
     </Container>
   )
 }
+
+const CARD_INFO = [
+  {
+    name: 'Greek Salad',
+    price: '12.99',
+    desc: 'The famous greek salad of cripsy lettuce, peppers, olives and our Chigago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
+    img_src: GreekSalad,
+  },
+  {
+    name: 'Bruchetta',
+    price: '5.99',
+    desc: 'Our bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. The BEST you can find.',
+    img_src: Bruchetta,
+  },
+  {
+    name: 'Lemon Dessert',
+    price: '5.00',
+    desc: 'This comes straight from Grandma\'s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
+    img_src: LemonDessert,
+  }
+]

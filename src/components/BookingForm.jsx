@@ -18,14 +18,14 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper
 } from "@chakra-ui/react";
+import { isEmpty } from "lodash";
 import * as Yup from 'yup';
 import dayjs from "dayjs";
-import { isEmpty } from "lodash";
 
-import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
 import { fetchAPI } from "../utils/api";
 import { getTimeSlot, saveTimeSlot } from "../utils/localStorage";
+import useSubmit from "../hooks/useSubmit";
 
 
 const reducer = (state, { type, payload }) => {
@@ -130,7 +130,7 @@ const BookingForm = ({ minBookingDate, maxBookingDate }) => {
           align={'flex-start'}
           py={32}
         >
-          <Box><Button onClick={ () => console.log(JSON.stringify(state.allTimeSlot))}>Show all</Button></Box>
+          {/* <Box><Button onClick={ () => console.log(JSON.stringify(state.allTimeSlot))}>Show all</Button></Box> */}
           <Heading as="h1" px={6}>Make your reservation</Heading>
           <Box p={6} rounded="md" w="100%">
             <form onSubmit={ formik.handleSubmit }>

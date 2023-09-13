@@ -4,16 +4,11 @@ import {
   Stack,
   Flex,
   Heading,
-  Text,
   Image,
-  Icon,
-  IconButton,
-  createIcon,
-  IconProps,
-  useColorModeValue,
+  Link,
 } from '@chakra-ui/react'
 
-import { HeroSectionLogo } from './assets';
+import { Chef } from '../assets';
 
 
 export default function Footer(props) {
@@ -37,13 +32,15 @@ export default function Footer(props) {
           spacing={{ base: 8, md: 24 }}
           py={{ base: 20, md: 28 }}
           direction={{ base: 'column', md: 'row' }}
+          borderTop={'1px solid gray'}
         >
           <Flex>
             <Image
-              src={HeroSectionLogo}
+              src={ Chef }
               alt="restaurant logo"
               objectFit={'cover'}
-              boxSize={'3xs'}
+              boxSize={'2xs'}
+              borderRadius={'xl'}
             />
           </Flex>
           <Stack
@@ -60,12 +57,12 @@ export default function Footer(props) {
               <Stack
                 align={{ base: 'center', md: 'flex-start' }}
               >
-                <Text>Home</Text>
-                <Text>About</Text>
-                <Text>Menu</Text>
-                <Text>Reservations</Text>
-                <Text>Order Online</Text>
-                <Text>Login</Text>
+                <Link href={'#'}>Home</Link>
+                <Link href={'#'}>About</Link>
+                <Link href={'#'}>Menu</Link>
+                <Link href={'#'}>Reservations</Link>
+                <Link href={'#'}>Order Online</Link>
+                <Link href={'#'}>Login</Link>
               </Stack>
             </Stack>
             <Stack
@@ -76,9 +73,9 @@ export default function Footer(props) {
               <Stack
                 align={{ base: 'center', md: 'flex-start' }}
               >
-                <Text>Address</Text>
-                <Text>Phone Number</Text>
-                <Text>Email</Text>
+                <Link href={'#'}>Address</Link>
+                <Link href={'#'}>Phone Number</Link>
+                <Link href={'#'}>Email</Link>
               </Stack>
             </Stack>
             <Stack
@@ -89,11 +86,11 @@ export default function Footer(props) {
               <Stack
                 align={{ base: 'center', md: 'flex-start' }}
               >
-                <Text>Github</Text>
-                <Text>Twitter</Text>
-                <Text>Instagram</Text>
-                <Text>Facebook</Text>
-                <Text>Linkedin</Text>
+                <Link href={'#'}>Github</Link>
+                <Link href={'#'}>Twitter</Link>
+                <Link href={'#'}>Instagram</Link>
+                <Link href={'#'}>Facebook</Link>
+                <Link href={'#'}>Linkedin</Link>
               </Stack>
             </Stack>
           </Stack>

@@ -246,7 +246,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'About',
-    href: 'booking'
+    href: '#'
   },
   {
     label: 'Menu',

@@ -1,24 +1,7 @@
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
-import { Grid, GridItem } from "@chakra-ui/react";
-import {
-  Routes,
-  Route,
-  Outlet,
-  Link,
-  NavLink,
-  useParams,
-  useNavigate,
-  useSearchParams,
-} from 'react-router-dom';
 
 import { AlertProvider } from "./context/alertContext";
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
-import HomePage from "./pages/HomePage";
-import BookingPage from "./pages/BookingPage";
-import ErrorPage from "./pages/ErrorPage";
-import ConfirmPage from "./pages/ConfirmPage";
+import Main from "./sections/Main";
 
 
 function App() {
